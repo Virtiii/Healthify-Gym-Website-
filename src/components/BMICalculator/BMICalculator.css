@@ -1,0 +1,107 @@
+/* BMICalculator.css */
+
+.bmi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0 50px 0;
+  margin-top: -12%;
+  color: var(--text-color); /* Define text color variable */
+  background-color: var(--bg-color); /* Define background color variable */
+}
+
+.bmi h1 {
+  font-size: 3rem;
+  margin: 0 auto;
+  letter-spacing: 1px;
+}
+
+.bmi .container {
+  display: flex;
+  gap: 50px;
+  min-width: 300px; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
+}
+
+.bmi .container .wrapper {
+  flex: 1;
+}
+
+.bmi .container .wrapper:last-child {
+  overflow: hidden;
+}
+
+.bmi .container .wrapper:last-child img {
+  width: 100%;
+  height: auto; /* Maintain image aspect ratio */
+}
+
+.bmi .container .wrapper form {
+  height: auto; /* Allow form height to adjust based on content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between form elements */
+}
+
+.bmi .container .wrapper form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust gap between form elements */
+  font-size: 18px; /* Adjust font size for smaller screens */
+  font-weight: 500;
+}
+
+.bmi .container .wrapper form div label {
+  margin-bottom: 5px; /* Add margin below label */
+  color: var(--text-color); /* Define text color variable */
+}
+
+.bmi .container .wrapper form div input,
+.bmi .container .wrapper form div select {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid var(--text-color); /* Add bottom border with text color */
+  background: transparent;
+  color: var(--text-color); /* Ensure text color matches dark mode */
+  width: 100%; /* Ensure input/select takes full width */
+}
+
+.bmi .container .wrapper form div option {
+  color: var(--text-color); /* Ensure text color matches dark mode */
+}
+
+.bmi .container .wrapper form div input:focus,
+.bmi .container .wrapper form div select:focus {
+  outline: none;
+}
+
+.bmi .container .wrapper form button {
+  border: none;
+  padding: 12px 40px; /* Increase padding for better touch targets */
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  background: var(--primary-color);
+  cursor: pointer;
+  width: 100%; /* Ensure button takes full width */
+}
+
+@media (max-width: 1520px) {
+  .bmi {
+    padding: 100px 20px 50px 20px;
+  }
+  .bmi .container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 735px) {
+  .bmi .container {
+    flex-direction: column-reverse;
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+}
